@@ -30,15 +30,26 @@ public class Geometry {
 
             double perimeter = triangleOperator.calculatePerimeter();
 
-            printResults(triangleOperator, perimeter);
+            PrintResults(triangleOperator, perimeter);
 
-            stillhaveTriangles = stillWantToRun();
+            Scanner scanner = new Scanner(System.in);
+
+            //CalculatePointinside(triangleOperator,scanner);
+
+            stillhaveTriangles = StillWantToRun(scanner);
         }
     }
 
-    private static boolean stillWantToRun() {
+    private static void CalculatePointinside(TraingleHelper triangleOperator, Scanner scanner) {
+
+        Point.PointFactory pointFactory = new Point.PointFactory();
+        Point PointTest = pointFactory.createPoint(scanner);
+
+        boolean isInside = triangleOperator.IspointInside(PointTest);
+    }
+
+    private static boolean StillWantToRun(Scanner scanner) {
         System.out.println("Want to add another Triangle ? press 1");
-        Scanner scanner = new Scanner(System.in);
         try {
             int x = scanner.nextInt();
             return x == 1;
@@ -51,7 +62,7 @@ public class Geometry {
         return false;
     }
 
-    private static void printResults(TraingleHelper triangleOperator, double perimeter) {
+    private static void PrintResults(TraingleHelper triangleOperator, double perimeter) {
         System.out.println("Perimeter: " + perimeter);
         if (triangleOperator.isIsosceles()) {
             System.out.println("The triangle is isosceles.");
