@@ -4,22 +4,16 @@ import java.util.Scanner;
 
 public class Geometry {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        PointFactory pointFactory = new PointFactory();
-        
 
-        System.out.println("Enter the coordinates for Point 1:");
 
-        System.out.println("Enter the coordinates for Point 1:");
-        Point point1 = pointFactory.createPoint(scanner);
 
-        System.out.println("Enter the coordinates for Point 2:");
-        Point point2 = pointFactory.createPoint(scanner);
+        Coordinates getcoordinates = new Coordinates();
 
-        System.out.println("Enter the coordinates for Point 3:");
-        Point point3 = pointFactory.createPoint(scanner);
+        getcoordinates.InputCoordinates();
 
-        Triangle triangle = new Triangle(point1, point2, point3);
+        Triangle triangle = new Triangle(getcoordinates.Point1,
+        getcoordinates.Point2,
+        getcoordinates.Point3);
         double perimeter = triangle.calculatePerimeter();
 
         System.out.println("Perimeter: " + perimeter);
