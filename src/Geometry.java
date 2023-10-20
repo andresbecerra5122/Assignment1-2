@@ -1,7 +1,5 @@
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
-
 
 
 public class Geometry {
@@ -14,22 +12,42 @@ public class Geometry {
     private static void StartProgram() {
 
         ArrayList<Triangle> AllTrinagles = new ArrayList<>();
+        boolean stillhaveTriangles = true;
 
-        Coordinates getcoordinates = new Coordinates();
+        while(stillhaveTriangles) {
 
-        getcoordinates.InputCoordinates();
+            Coordinates getcoordinates = new Coordinates();
 
-        Triangle triangle = new Triangle(getcoordinates.Point1,
-                getcoordinates.Point2,
-                getcoordinates.Point3);
+            getcoordinates.InputCoordinates();
 
-        AllTrinagles.add(triangle);
+            Triangle triangle = new Triangle(getcoordinates.Point1,
+                    getcoordinates.Point2,
+                    getcoordinates.Point3);
 
-        TraingleHelper triangleOperator = new TraingleHelper(triangle);
+            AllTrinagles.add(triangle);
 
-        double perimeter = triangleOperator.calculatePerimeter();
+            TraingleHelper triangleOperator = new TraingleHelper(triangle);
 
-        printResults(triangleOperator,perimeter);
+            double perimeter = triangleOperator.calculatePerimeter();
+
+            printResults(triangleOperator, perimeter);
+
+            stillhaveTriangles = stillWantToRun();
+        }
+    }
+
+    private static boolean stillWantToRun() {
+        System.out.println("Want to add another Triangle ? press 1");
+        Scanner scanner = new Scanner(System.in);
+        int x = scanner.nextInt();
+        if (x == 1)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 
     private static void printResults(TraingleHelper triangleOperator, double perimeter) {
