@@ -39,15 +39,16 @@ public class Geometry {
     private static boolean stillWantToRun() {
         System.out.println("Want to add another Triangle ? press 1");
         Scanner scanner = new Scanner(System.in);
-        int x = scanner.nextInt();
-        if (x == 1)
-        {
-            return true;
+        try {
+            int x = scanner.nextInt();
+            return x == 1;
         }
-        else
+        catch (Exception E)
         {
-            return false;
+            System.exit(0);
         }
+
+        return false;
     }
 
     private static void printResults(TraingleHelper triangleOperator, double perimeter) {
