@@ -34,7 +34,7 @@ public class Geometry {
 
             Scanner scanner = new Scanner(System.in);
 
-            //CalculatePointinside(triangleOperator,scanner);
+            CalculatePointinside(triangleOperator,scanner);
 
             stillhaveTriangles = StillWantToRun(scanner);
         }
@@ -45,7 +45,11 @@ public class Geometry {
         Point.PointFactory pointFactory = new Point.PointFactory();
         Point PointTest = pointFactory.createPoint(scanner);
 
-        boolean isInside = triangleOperator.IspointInside(PointTest);
+        if (triangleOperator.IspointInside(PointTest)) {
+            System.out.println("The point is inside the trinagle.");
+        } else {
+            System.out.println("The point is not inside the triangle");
+        }
     }
 
     private static boolean StillWantToRun(Scanner scanner) {
