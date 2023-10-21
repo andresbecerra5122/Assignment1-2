@@ -7,7 +7,9 @@
     <list default="true" id="c88aa0ac-ade4-4676-b7a9-2e7a7d0b69c9" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Geometry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Geometry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Point.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Point.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/TraingleHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TraingleHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Triangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Triangle.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +62,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1697840685191</updated>
-      <workItem from="1697840686265" duration="5668000" />
+      <workItem from="1697840686265" duration="6680000" />
     </task>
     <servers />
   </component>

@@ -1,5 +1,6 @@
 import java.util.Scanner;
 
+//class point to get single responsibilty
 class Point {
     double x, y;
 
@@ -8,6 +9,7 @@ class Point {
         this.y = y;
     }
 
+    //applying factory design parttern to get the point of a triangle
     static class PointFactory {
         Point createPoint(Scanner scanner) {
             System.out.println("Enter x coordinate:");
